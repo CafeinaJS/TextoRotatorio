@@ -1,0 +1,58 @@
+/*     O código abaixo é somente para aparência da página. */
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Source Code Pro", sans-serif;
+  background-color: #1e1e1e;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+/* fim código aparência */
+
+.title {
+  position: relative;
+  color: #e2e2e2;
+}
+.rotate-words {
+  display: inline;
+  margin-left: 10px;
+}
+.rotate-words span {
+  width: max-content;
+  position: absolute;
+  background-color: #ffcc33;
+  color: #000000;
+  padding-inline: 10px;
+  opacity: 0;
+  transform-origin: 10% 75%;
+  animation: rotateWords 9s var(--d) linear infinite;
+}
+@keyframes rotateWords {
+  5% {
+    opacity: 1;
+  }
+  10%,
+  20% {
+    opacity: 1;
+    transform: rotate(5deg);
+  }
+  15% {
+    transform: rotate(-1deg);
+  }
+  25% {
+    opacity: 0;
+    transform: translateY(120px) rotate(20deg);
+  }
+}
